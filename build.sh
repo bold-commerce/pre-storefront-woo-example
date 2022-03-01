@@ -1,0 +1,1 @@
+zip -r ./bold-pre-sf-plugin.zip ./ -x "*.json" "*.lock" "*.xml" ".gitignore" "*.zip"
