@@ -2,8 +2,8 @@
 
 namespace Bold\Controllers\PriceRulesEngine;
 
-use Bold\Controllers\PriceRulesEngine\Componenets\PlatformDataController;
-use Bold\Controllers\PriceRulesEngine\Componenets\UpdateCartController;
+use Bold\Controllers\PriceRulesEngine\Components\PlatformDataController;
+use Bold\Controllers\PriceRulesEngine\Components\UpdateCartController;
 use Bold\Views\PriceRulesEngine\PlatformDataView;
 use Bold\Views\PriceRulesEngine\ProductPriceView;
 use Bold\Views\PriceRulesEngine\CartPriceView;

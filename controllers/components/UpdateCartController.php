@@ -1,6 +1,6 @@
 <?php
 
-namespace Bold\Controllers\PriceRulesEngine\Componenets;
+namespace Bold\Controllers\PriceRulesEngine\Components;
 
 class UpdateCartController
 {
