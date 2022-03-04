@@ -27,6 +27,7 @@ class UpdateCartController
 		$serializedCart['cart_total'] = WC()->cart->total;
 
 		$cart = json_encode($serializedCart);
+		
 		return $cart;
 	}
 }

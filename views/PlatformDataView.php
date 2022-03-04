@@ -20,6 +20,7 @@ class PlatformDataView
 		$cartArray = $cart === [] ? "null" : $cart;
 		$prod = empty($product) ? "null" : $product;
 		$collection = empty($processedProducts) ? "null" : $processedProducts;
+		$customerId = empty($user->id) ? "null" : $user->id;
 
 		?> <script id="bold-platform-data" type="application/json">
 			{
@@ -30,7 +31,7 @@ class PlatformDataView
 					"currency_symbol": "<?php esc_html_e($currencySymbol) ?>"
 				},
 				"customer": {
-					"id": <?php esc_html_e($user->id) ?>,
+					"id": <?php esc_html_e($customerId) ?>,
 					"tags": "<?php esc_html_e($roles) ?>"
 				},
 				"cart": <?php echo wp_kses_post($cartArray) ?>,

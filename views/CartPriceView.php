@@ -22,13 +22,12 @@ class CartPriceView
 
 	public function updateCart($cart)
 	{
+		
 		?>
 		<script type="text/javascript">
-			window.BOLD && window.BOLD.common && window.BOLD.common.eventEmitter.emit("BOLD_NEW_CART", {
-				
-				lineItems: <?php esc_html_e($cart);
-				; ?>
-			});
+			const items = {lineItems: <?php echo $cart ?>}
+			console.log("BOLD_NEW_CART", items);
+			window.BOLD && window.BOLD.common && window.BOLD.common.eventEmitter.emit("BOLD_NEW_CART", items);
 		</script>
 		<?php
 	}

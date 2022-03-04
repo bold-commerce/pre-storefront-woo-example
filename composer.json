@@ -19,5 +19,10 @@
             "./vendor/bin/phpcs --standard=./phpcs.xml ./"
           ]
       
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
 }

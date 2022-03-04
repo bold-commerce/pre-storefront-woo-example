@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /*
   Plugin Name: Bold Storefront Price Rules Engine
-  Version: 2.0.0
+  Version: 2.0.1
 */
 
 namespace PriceRulesEngine;
