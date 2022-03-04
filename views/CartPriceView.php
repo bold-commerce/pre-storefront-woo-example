@@ -25,9 +25,7 @@ class CartPriceView
 		
 		?>
 		<script type="text/javascript">
-			let items = {lineItems: <?php echo $cart ?>}
-			console.log(items)
-			window.BOLD && window.BOLD.common && window.BOLD.common.eventEmitter.emit("BOLD_NEW_CART", items);
+			window.BOLD && window.BOLD.common && window.BOLD.common.eventEmitter.emit("BOLD_NEW_CART", {lineItems: <?php echo $cart ?>});
 		</script>
 		<?php
 	}
