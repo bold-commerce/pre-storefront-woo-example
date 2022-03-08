@@ -31,17 +31,19 @@ jQuery(document).ready(function($){
 	}
 	
     async function handleEvent(e) {
-        if(e && e.currentTarget && e.currentTarget.responseURL.responseURL === `${window.location.origin}/cart/`){
-            console.log(e)
-            let cart = await getCart()
-            cart.items.map(item => {
-                window.BOLD.pre.events.emit('cart_updated_qty', { qty: item.quantity, id: item.key });
-            })
+        if(e && e.currentTarget && e.currentTarget.responseURL && e.currentTarget.responseURL.includes(`get_refreshed_fragments`)){
+            await getCart().then(data => {
+				if(data && data.items){
+					data.items.map(item => {
+						window.BOLD.pre.events.emit('cart_updated_qty', { qty: item.quantity, id: item.key });
+					})
+				}
+			})
         }
     }
 	
 	async function getCart(){
-	const url = `/wp-json/wc/store/cart`;
+	const url = `${window.location.origin}/wp-json/wc/store/cart`;
 	const options = {
 		credentials: 'include',
 		method: "GET",
