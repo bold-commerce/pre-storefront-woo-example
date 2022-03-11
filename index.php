@@ -3,8 +3,8 @@
  * Plugin Name: Bold Storefront Price Rules Engine
  * Description: Bold Price Rules Store Front Scripts
  * Plugin URI: https://github.com/bold-commerce/pre-storefront-woo-example
- * Version: 1.0.4
- * Author: Jake Smith
+ * Version: 1.2.4
+ * Author: Bold Commerce
  * 
  * @package Theme_Customisations
 */
@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Main Theme_Customisations Class
  *
  * @class Theme_Customisations
- * @version	1.0.4
+ * @version	1.2.4
  * @since 1.0.0
  * @package	Theme_Customisations
  */
@@ -57,7 +57,7 @@ final class Theme_Customisations {
 	 */
 	public function theme_customisations_js() {
 		if(is_cart()){
-			wp_enqueue_script( 'custom-js', plugins_url( '/custom/custom.js', __FILE__ ), array( 'jquery' ) );
+			wp_enqueue_script( 'custom-js', plugins_url( '/custom/custom.js', __FILE__ ), array( 'jquery' ), '1.2.4' );
 		}
 	}
 
