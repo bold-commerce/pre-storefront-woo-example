@@ -54,7 +54,14 @@ class PlatformDataController
 					$cartVariant = wc_get_product($product['variation_id']);
 					$allCartProducts[] = $cartVariant->get_data();
 				} else {
-					$allCartProducts[] = $cartProduct->get_data();
+					$cartItemProduct = (array) $cartProduct->get_data();
+					$cartItemToAdd = [];
+					$cartItemToAdd['id'] = $cartItemProduct['id'];
+					$cartItemToAdd['name'] = $cartItemProduct['name'];
+					$cartItemToAdd['price'] = $cartItemProduct['price'];
+					$cartItemToAdd['sku'] = $cartItemProduct['sku'];
+
+					$allCartProducts[] = $cartItemToAdd;
 				}
 			}
 		}
